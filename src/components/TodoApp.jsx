@@ -1,6 +1,7 @@
 // src/components/TodoApp.jsx
 import React, { useState, useEffect } from 'react';
 import { Plus, CheckCircle, Circle, Trash2, RefreshCw } from 'lucide-react';
+import { log } from 'console';
 
 export default function TodoApp() {
   const [todos, setTodos] = useState([]);
@@ -9,7 +10,8 @@ export default function TodoApp() {
   const [error, setError] = useState(null);
 
   // API URL - replace with your actual backend URL
-  const API_URL = 'http://localhost:3000/api/todos';
+  const API_URL = process.env.REACT_APP_API_URL;
+  console.log({API_URL});
 
   // Fetch todos from API
   const fetchTodos = async () => {
