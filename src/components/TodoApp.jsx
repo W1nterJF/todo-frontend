@@ -1,7 +1,6 @@
 // src/components/TodoApp.jsx
 import React, { useState, useEffect } from 'react';
 import { Plus, CheckCircle, Circle, Trash2, RefreshCw } from 'lucide-react';
-import { log } from 'console';
 
 export default function TodoApp() {
   const [todos, setTodos] = useState([]);
